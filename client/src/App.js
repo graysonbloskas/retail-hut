@@ -1,5 +1,5 @@
 import React from 'react'
-import Cards from "../src/components/Cards"
+import Cards from "./components/Card"
 import Header from './components/Header'
 
 function App() {
