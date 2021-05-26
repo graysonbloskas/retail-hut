@@ -3,7 +3,17 @@ import React from "react";
 function CardBody() {
   return (
     <div>
-      <h4>Hi this is a test!</h4>
+      <ul>
+        <li>
+          <p>This is a placeholder product name!</p>
+        </li>
+        <li>
+          <p>This is a placeholder product price!</p>
+        </li>
+        <li>
+          <p>This is a placeholder for the businesses account name!</p>
+        </li>
+      </ul>
     </div>
   );
 }

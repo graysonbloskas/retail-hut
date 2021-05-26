@@ -1,8 +1,8 @@
 import React from "react";
 
-function CardBtn(props) {
+function CardBtn() {
   return (
-    <button />
+    <button type="button" className="btn btn-primary">primary</button>
   );
 }
 
