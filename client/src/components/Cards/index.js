@@ -1,25 +1,28 @@
-import React from 'react'
+import React from "react";
 import CardBody from "../CardBody";
 import CardBtn from "../CardBtn";
 import CardImg from "../CardImage";
 import CardHeading from "../CardHeading";
+import Container from "../Container";
+import Row from "../Row";
+import Col from "../Col";
 
-function Card() {
+function Cards() {
   return (
     <div>
-      <CardHeading />
-      <CardImg />
-      <CardBody />
-      <CardBtn
-        style={{ opacity: 1 }}
-        data-value="back"
-      />
-      <CardBtn
-        style={{ opacity: 1 }}
-        data-value="next"
-      />
+      <Container>
+        <Row>
+          <Col>
+            <CardHeading />
+            <CardImg />
+            <CardBody />
+            <CardBtn style={{ opacity: 1 }} data-value="back" />
+            <CardBtn style={{ opacity: 1 }} data-value="next" />
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
 
-export default Card;
+export default Cards;
