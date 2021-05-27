@@ -1,32 +1,44 @@
 const router = require("express").Router();
-const catergory = require("../models/category");
-const index = require("../models/index");
-const product = require("../models/product");
-const shop = require("../models/shop");
-const user = require("../models/user");
+//can get all 4 by requiring index
+//destructed
+const {Category, Product, Shop, User} = require("../models/index");
 
-router.post("api/catergory", ({ body }, res) => {
-    catergory.create(body)
-    .then(dbCatergory => {
-        res.json(dbCatergory);
+// This route creates a new category.
+router.post("api/category", ({ body }, res) => {
+    Category.create(body)
+    .then(dbCategory => {
+        res.json(dbCategory);
     })
     .catch(err => {
         res.status(400).json(err);
     });
 });
 
-router.post("api/index", ({ body }, res) => {
-    index.create(body)
-    .then(dbIndex => {
-        res.json(dbIndex);
+//get all categories
+router.get("/api/category", (req, res) => {
+    Category.find({})
+    .then(dbCategory => {
+        res.json(dbCategory);
     })
     .catch(err => {
         res.status(400).json(err);
     });
 });
 
+//no collection called index, needs to be removed.
+// router.post("api/index", ({ body }, res) => {
+//     index.create(body)
+//     .then(dbIndex => {
+//         res.json(dbIndex);
+//     })
+//     .catch(err => {
+//         res.status(400).json(err);
+//     });
+// });
+
+//creates new product
 router.post("api/product", ({ body }, res) => {
-    product.create(body)
+    Product.create(body)
     .then(dbProduct => {
         res.json(dbProduct);
     })
@@ -35,8 +47,63 @@ router.post("api/product", ({ body }, res) => {
     });
 });
 
+//get all products ***
+router.get("/api/product", (req, res) => {
+    Product.find({})
+    .then(allProducts => {
+        res.json(allProducts);
+    })
+    .catch(err => {
+        res.status(400).json(err);
+    });
+});
+
+//get product by id ***
+router.get("/api/product/:id", (req, res) => {
+    Product.find({_id: req.params.id})
+    .then(product => {
+        res.json(product);
+    })
+    .catch(err => {
+        res.status(400).json(err);
+    });
+});
+
+//get all products by shop..Added with tutor
+//catergory._id is taking all the products and filtering them by their Ids.
+//route should get all products that match particular cat id.
+router.get("api/product/category/:id", (req, res) => {
+    Product.find({})
+    .then(allProducts => {
+        const filteredProducts = allProducts.filter(p => {
+            const categoryIds = p.category.map(c => c._id);
+            return categoryIds.includes(req.params.id);
+        });
+        res.json(filteredProducts);
+    })
+    .catch(err => {
+        res.status(400).json(err);
+    });
+});
+
+//route should get all products that match particular shop id.
+router.get("api/product/shop/:id", (req, res) => {
+    Product.find({})
+    .then(allProducts => {
+        const filteredProducts = allProducts.filter(p => {
+            const shopIds = p.shop.map(c => c._id);
+            return shopIds.includes(req.params.id);
+        });
+        res.json(filteredProducts);
+    })
+    .catch(err => {
+        res.status(400).json(err);
+    });
+});
+
+//creates a new shop
 router.post("api/shop", ({ body }, res) => {
-    shop.create(body)
+    Shop.create(body)
     .then(dbShop => {
         res.json(dbShop);
     })
@@ -45,8 +112,9 @@ router.post("api/shop", ({ body }, res) => {
     });
 });
 
+//getting all shops
 router.get("/api/shop", (req, res) => {
-    shop.find({})
+    Shop.find({})
     .then(dbShop => {
         res.json(dbShop);
     })
@@ -55,8 +123,9 @@ router.get("/api/shop", (req, res) => {
     });
 });
 
+//creates a new user
 router.post("api/user", ({ body }, res) => {
-    user.create(body)
+    User.create(body)
     .then(dbUser => {
         res.json(dbUser);
     })
