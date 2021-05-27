@@ -1,10 +1,10 @@
-import React from 'react';
+// import React from 'react';
 
-function BusinessImg () {
-    return
-    <div>
+// function BusinessImg () {
+//     return
+//     <div>
 
-    </div>
-}
+//     </div>
+// }
 
-export default BusinessImg;
+// export default BusinessImg;
