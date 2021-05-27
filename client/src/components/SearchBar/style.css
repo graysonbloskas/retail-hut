@@ -1,3 +1,13 @@
 .searchBar {
-    text-align: center;
-}
+    display: inline-block;
+    margin-left: 5rem;
+    vertical-align: middle;
+ }
+
+ #searchInput {
+    min-width: 500px;
+ }
+
+ .searchBtn {
+     display: inline-block;
+ }
