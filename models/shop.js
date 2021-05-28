@@ -1,14 +1,22 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+ 
+
 const shopSchema = new Schema({
 
-name:{ type: String, required: true },
+    name:{ type: String, required: true },
+    
+    href: { type: String, default: "" },
+  
+    products: [{
+        type: Schema.Types.ObjectId, 
+        ref: "Product"
+    }]
+    });
 
-href: { type: String, default: "" }
-});
 
-const Shop = mongoose.model("Shop",  shopSchema);
+    const Shop = mongoose.model("Shop",  shopSchema);
 
-module.exports = Shop;
 
+    module.exports = Shop
