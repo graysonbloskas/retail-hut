@@ -17,3 +17,5 @@ function StaffPicks() {
         </Container>
     </div>
 }
+
+export default StaffPicks;
