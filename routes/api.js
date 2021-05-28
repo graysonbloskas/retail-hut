@@ -69,7 +69,7 @@ router.get("/api/product/:id", (req, res) => {
     });
 });
 
-//get all products by shop..Added with tutor
+//get all products by shop.
 //catergory._id is taking all the products and filtering them by their Ids.
 //route should get all products that match particular cat id.
 router.get("api/product/category/:id", (req, res) => {
