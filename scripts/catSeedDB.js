@@ -7,7 +7,7 @@ mongoose.connect(
   );
 
   const catSeed = [
-      { name: "Clothing/Jewelry" },
+      { name: "Clothing-Jewelry" },
 
       { name: "Electronics" },
 

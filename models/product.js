@@ -12,7 +12,7 @@ const productSchema = new Schema({
 
   stock: { type: Number, required: true },
  
-  category: [{ type: Schema.Types.ObjectId, ref: "Category"}],
+  category: [{ type: Schema.Types.ObjectId, ref: "Category", index: true }],
 
   shop: [{ type: Schema.Types.ObjectId, ref: "Shop"}]
 
