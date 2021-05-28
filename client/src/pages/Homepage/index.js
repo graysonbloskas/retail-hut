@@ -6,20 +6,31 @@ import homepageHero from "../../components/Homepage-Hero";
 import Header from "../../components/Header";
 import FeaturedList from "../../components/FeaturedList";
 import Nav from "../../components/Nav";
+import Footer from "../../components/Footer";
+
 const Homepage = () => {
-  return (
-    <Container fluid>
-      <Row>
-        <Col size="md-6">
-          <Header />
-          <Nav />
-        </Col>
-      </Row>
-      <Row>
-        <FeaturedList />
-      </Row>
-    </Container>
-  );
-};
+
+    return (
+        <div>
+        <Container fluid>
+            <Row>
+                <Col size='md-6'>
+                    <Header />           
+                </Col>
+                <Nav />
+            </Row>
+            <Row>
+            <FeaturedList />
+            </Row>
+              <Col>
+                 <Row>
+                    <Footer />
+                  </Row>
+              </Col>
+        </Container>
+        </div>
+    )
+}
+
 
 export default Homepage;
