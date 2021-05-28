@@ -8,17 +8,21 @@ import FeaturedList from '../../components/FeaturedList';
 import Nav from '../../components/Nav'
 const Homepage = () => {
     return (
+        <div>
         <Container fluid>
             <Row>
                 <Col size='md-6'>
                     <Header />
-                    <Nav />
+                    
                 </Col>
+                <Nav />
             </Row>
             <Row>
             <FeaturedList />
             </Row>
         </Container>
+        
+        </div>
     )
 }
 
