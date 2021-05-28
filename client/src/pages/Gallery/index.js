@@ -5,6 +5,7 @@ import Row from '../../components/Row';
 import homepageHero from '../../components/Homepage-Hero';
 import Header from '../../components/Header'
 import FeaturedList from '../../components/FeaturedList';
+import Nav from '../../components/Nav'
 
 const Gallery = () => {
     return (
@@ -12,6 +13,7 @@ const Gallery = () => {
             <Row>
                 <Col size='md-6'>
                     <Header />
+                    <Nav />
                 </Col>
             </Row>
         </Container>

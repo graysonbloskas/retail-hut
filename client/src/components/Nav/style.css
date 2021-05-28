@@ -1,0 +1,11 @@
+.cats {
+    font-family:Arial, Helvetica, sans-serif;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-weight:700;
+    font-size:18px;
+    padding-left:6px;
+    transition: all 0.2s ease-in-out;
+    margin-left:5px;
+    text-align: center;
+}
