@@ -1,17 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import API from "../../utils/API";
 
 function CardBody() {
+  const [cardInfo, updateCards] = React.useState([]);
+
+  useEffect(() => {
+    cardInfoGetter()
+  }, []);
+
+  function cardInfoGetter() {
+    API.getProducts()
+    .then(res =>
+      updateCards(res.data)
+      )
+      .catch(err => console.log(err));
+  };
+
   return (
     <div>
       <ul>
         <li>
-          <p>This is a placeholder product name!</p>
+          <p>{cardInfo.title}</p>
         </li>
         <li>
-          <p>This is a placeholder product price!</p>
+          <p>{cardInfo.price}</p>
         </li>
         <li>
-          <p>This is a placeholder for the businesses account name!</p>
+          <p>{cardInfo.shop}</p>
         </li>
       </ul>
     </div>

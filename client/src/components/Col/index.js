@@ -2,7 +2,7 @@ import React from 'react'
 
 function Col(props) {
     return (
-      <div className="col-md">
+      <div className={size}>
         {props.children}
       </div>
     );
