@@ -13,7 +13,7 @@ const Nav = () => {
   </button>
   <div className="collapse navbar-collapse containers" id="navbarNavAltMarkup">
     <div className="navbar-nav">
-      <a className="nav-item nav-link" href="/gallery">Clothing/Jewelry<span class="sr-only"></span></a>
+      <a className="nav-item nav-link" href="/gallery">Clothing/Jewelry<span className="sr-only"></span></a>
       <a className="nav-item nav-link" href="/gallery">Electronics</a>
       <a className="nav-item nav-link" href="/gallery">Shoes</a>
       <a className="nav-item nav-link" href="/gallery">Beauty</a>
