@@ -2,7 +2,7 @@ import React from 'react'
 
 function Col(props) {
     return (
-      <div className={size}>
+      <div className={props.size}>
         {props.children}
       </div>
     );
