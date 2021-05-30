@@ -6,7 +6,7 @@ import Business from './pages/Businesspage-user'
 import FeaturedList from './components/FeaturedList'
 import Homepage from '../src/pages/Homepage';
 import Gallery from '../src/pages/Gallery';
-import wishlistPage from './pages/wishlistPage'
+import WishlistPage from './pages/WishlistPage'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
       <Route exact path='/' component={Homepage} />
       <Route exact path='/Home' component={Homepage} />
       <Route exact path='/Gallery' component={Gallery} />
-      <Route exact path='/wishlist' component={wishlistPage} /> 
+      <Route exact path='/wishlist' component={WishlistPage} /> 
       <Route exact path='/Shop' component={Business} />
       </Switch>
       
