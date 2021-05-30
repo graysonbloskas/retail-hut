@@ -1,4 +1,5 @@
 const router = require("express").Router();
+
 //can get all 4 by requiring index
 //destructed
 const {Category, Product, Shop, User} = require("../models/index");
@@ -132,6 +133,12 @@ router.post("api/user", ({ body }, res) => {
     .catch(err => {
         res.status(400).json(err);
     });
+});
+
+//creating route for wishlist. no data for now. making something up
+router.get("api/wishlist/:id", (req, res) => {
+    const userId = req.params.id;
+    
 });
 
 module.exports = router;
