@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import API from "../../utils/API";
 
 function CardBody() {
-  const [cardInfo, updateCards] = React.useState([]);
+  const [cardInfo, updateCards] = useState([]);
 
   useEffect(() => {
     cardInfoGetter()
@@ -11,7 +11,7 @@ function CardBody() {
   function cardInfoGetter() {
     API.getProducts()
     .then(res =>
-      updateCards(res.data)
+      updateCards(res.data),
       )
       .catch(err => console.log(err));
   };
