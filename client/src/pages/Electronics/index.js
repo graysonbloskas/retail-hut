@@ -2,12 +2,10 @@ import React from 'react';
 import Container from '../../components/Container';
 import Col from '../../components/Col';
 import Row from '../../components/Row';
-import homepageHero from '../../components/Homepage-Hero';
 import Header from '../../components/Header'
-import FeaturedList from '../../components/FeaturedList';
 import Nav from '../../components/Nav'
 
-const Gallery = () => {
+const Electronics = () => {
     
     return (
         <Container fluid>
@@ -21,4 +19,4 @@ const Gallery = () => {
     )
 }
 
-export default Gallery;
+export default Electronics;
