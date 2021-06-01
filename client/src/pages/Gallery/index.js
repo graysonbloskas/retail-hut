@@ -11,6 +11,7 @@ import API from "../../utils/API";
 import ProductContext from "../../utils/ProductContext";
 
 const Gallery = () => {
+
     const [productState, setProductState] = useState({
         title: "",
         price: 0,

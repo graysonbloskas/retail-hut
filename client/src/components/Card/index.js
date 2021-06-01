@@ -16,4 +16,5 @@ function Card(key, title, description, price, image) {
   );
 }
 
+
 export default Card;
