@@ -6,7 +6,7 @@ import Business from './pages/Businesspage-user'
 import FeaturedList from './components/FeaturedList'
 import Homepage from '../src/pages/Homepage';
 import Gallery from '../src/pages/Gallery';
-import WishlistPage from '../src/pages/WishlistPage';
+import WishlistPage from '../src/pages/wishlistPage';
 import SigninPage from '../src/pages/SigninPage';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
