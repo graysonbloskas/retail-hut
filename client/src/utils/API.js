@@ -5,7 +5,7 @@ export default {
       console.log("route hit")
       return axios.get("/api/products/")
       },
-    getWishList: function(id) {
-      return axios.get("/api/wishlist/" + id);
+    getWishList: function() {
+      return axios.get("/api/wishlist/");
     }
 }

@@ -1,7 +1,6 @@
 const router = require("express").Router();
 // const WishListController = require("../../controllers/WishListController");
 
-
 // router.route("/")
 //   .get(WishListController.findAll)
 //   .post(WishListController.create);

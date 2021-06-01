@@ -11,5 +11,7 @@ findAll: function(req, res) {
         console.log(err)
         res.json(err)
     })
+
+
   },
 }
