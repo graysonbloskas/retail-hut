@@ -8,6 +8,8 @@ import Homepage from '../src/pages/Homepage';
 import Gallery from '../src/pages/Gallery';
 import WishlistPage from '../src/pages/wishlistPage';
 import SigninPage from '../src/pages/SigninPage';
+import SignupUserPage from '../src/pages/SignupPage';
+
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
       <Route exact path='/wishlist' component={WishlistPage} /> 
       <Route exact path='/Shop' component={Business} />
       <Route path='/signin' component={SigninPage} />
+      <Route path='/signup' component={SignupUserPage} />
       </Switch>
       
     </div>
