@@ -2,10 +2,16 @@ const db = require("../models")
 
 module.exports = {
 findAll: function(req, res) {
-    db.Product
-      .find(req.query)
-      .sort({ date: -1 })
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+    console.log("looking for the products")
+    db.Product.find()
+    .then(data => {
+        console.log(data)
+        res.json(data)
+    }) .catch (err => {
+        console.log(err)
+        res.json(err)
+    })
+
+
   },
 }
