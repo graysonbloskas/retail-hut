@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const WishListController = require("../../controllers/WishListController");
+const WishListController = require("../../controller/WishListController");
 
 
 router.route("/")
