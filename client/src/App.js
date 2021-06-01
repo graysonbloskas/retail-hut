@@ -7,19 +7,20 @@ import FeaturedList from './components/FeaturedList'
 import Homepage from '../src/pages/Homepage';
 import Gallery from '../src/pages/Gallery';
 import WishlistPage from '../src/pages/WishlistPage';
+import SigninPage from '../src/pages/SigninPage';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
     <Router>
     <div>
- 
       <Switch>
       <Route exact path='/' component={Homepage} />
       <Route exact path='/Home' component={Homepage} />
       <Route exact path='/Gallery' component={Gallery} />
       <Route exact path='/wishlist' component={WishlistPage} /> 
       <Route exact path='/Shop' component={Business} />
+      <Route path='/signin' component={SigninPage} />
       </Switch>
       
     </div>
