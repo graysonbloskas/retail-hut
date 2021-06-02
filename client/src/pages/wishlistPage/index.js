@@ -32,7 +32,7 @@ const WishlistPage = () => {
     );
   return (
     <Container fluid>
-      <Header />
+      <Nav />
       <Row>
         <Col>
           <CardContainer>
