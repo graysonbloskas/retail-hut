@@ -27,7 +27,7 @@ const Homepage = () => {
       console.log(res.data);
       console.log(res.data[0]);
       var featuredProducts = [];
-      console.log("This is the watchlist");
+
       for (var i = 0; i < res.data.length; i++) {
         featuredProducts.push(res.data[i]);
       }
