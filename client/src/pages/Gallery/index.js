@@ -45,13 +45,10 @@ const Gallery = () => {
                     <Nav />
                 </Col>
                 <Col>
-                {productState.length ? productState.map((product, i) => (
+                {productState.length ? productState.map((product,i) => (
                     <Card
                     key={i}
-                    title={product.title}
-                    price={product.price}
-                    description={product.description}
-                    image={product.image}
+                    {... product}
                     />
                 )) : "Loading products, please wait! "}
                 </Col>

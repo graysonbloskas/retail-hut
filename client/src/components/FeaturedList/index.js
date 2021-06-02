@@ -13,18 +13,10 @@ function FeaturedList() {
         <Row>
           <Col>
           {featuredList.length ? featuredList.map((product,i) => (
-            <div className="card" style={{"width": "18rem"}} key={i}>
-              <img className="card-img-top" src={product.image} alt="Card image cap" />
-              <div className="card-body">
-                <h5 className="card-title">{product.title}</h5>
-                <p className="card-text">
-                  {product.price}
-                </p>
-                <a href="#" className="btn btn-primary">
-                  Go somewhere
-                </a>
-              </div>
-            </div>
+                    <Card
+                    key={i}
+                    {... product}
+                    />
             )) : "we are loading your data"}
 
           </Col>
