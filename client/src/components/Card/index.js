@@ -3,8 +3,6 @@ import {CardContainer, CardWrapper, ProductCard, CardH1, BarCard, CardH2, CardsP
 
 function Card(props) {
   return (
-    <CardContainer>
-      <CardWrapper>
         <ProductCard>
           <CardImg>
             <img src={props.image}
@@ -20,8 +18,6 @@ function Card(props) {
             <a>Add to Cart</a>
           </BtnContainer>
         </ProductCard>
-      </CardWrapper>
-    </CardContainer>
   );
 }
 

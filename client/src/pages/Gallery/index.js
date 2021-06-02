@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Container from '../../components/Container';
 import Col from '../../components/Col';
-import Row from '../../components/Row';
-import homepageHero from '../../components/Homepage-Hero';
 import Card from '../../components/Card'
+import {CardContainer, CardWrapper} from './elements.js'
 import Header from '../../components/Header'
-import FeaturedList from '../../components/FeaturedList';
 import Nav from '../../components/Nav'
 import API from "../../utils/API";
 import ProductContext from "../../utils/ProductContext";
@@ -38,22 +35,21 @@ const Gallery = () => {
 
     return (
         <ProductContext.Provider value={productState}>
-        <Container fluid>
-            <Row>
                 <Col size='md-6'>
                     <Header />
                     <Nav />
                 </Col>
-                <Col>
-                {productState.length ? productState.map((product,i) => (
+                <CardContainer>
+                  <CardWrapper>
+                  {productState.length ? productState.map((product,i) => (
                     <Card
                     key={i}
                     {... product}
                     />
                 )) : "Loading products, please wait! "}
-                </Col>
-            </Row>
-        </Container>
+                  </CardWrapper>
+                </CardContainer>
+
         </ProductContext.Provider>
     )
 }
