@@ -90,13 +90,13 @@ margin 40px auto 0 auto
 export const SocialLogo = styled(Link)`
 color: #fff;
 justify-self: start; 
-cursor: pointer;
+
 text-decoration: none; 
 font-size: 1.5rem;
 display; flex; 
 align-items: center;
 margin-bottom: 16px;
-font-weight: bold;
+
 
 &:hover {
     color: #01bf71;

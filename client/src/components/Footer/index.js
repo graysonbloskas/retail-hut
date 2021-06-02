@@ -14,7 +14,7 @@ import {
   SocialIcons,
   SocialIconLink
 } from './FooterElements';
-
+import FooterLogo from '../LogoFooter'
 
 
 const Footer = () => {
@@ -54,7 +54,7 @@ const Footer = () => {
         <SocialMedia>
           <SocialMediaWrap>
             <SocialLogo to='/'>
-              [tempLogo]
+              <FooterLogo />
             </SocialLogo>
             <WebsiteRights>
               Retailhut © {new Date().getFullYear()}     All Rights Reserved. 
