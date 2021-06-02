@@ -1,70 +1,57 @@
-// import React, { useEffect, useState } from "react";
-// import Container from '../../components/Container';
-// import Col from '../../components/Col';
-// import Row from '../../components/Row';
-// import homepageHero from '../../components/Homepage-Hero';
-// import Card from '../../components/Card'
-// import Header from '../../components/Header'
-// import FeaturedList from '../../components/FeaturedList';
-// import Nav from '../../components/Nav'
-// import API from "../../utils/API";
-// import ProductContext from "../../utils/ProductContext";
+import React, { useEffect, useState } from "react";
+import Col from '../../components/Col';
+import Card from '../../components/Card'
+import {CardContainer, CardWrapper} from '../elements.js'
+import Header from '../../components/Header'
+import Nav from '../../components/Nav'
+import API from "../../utils/API";
+import ProductContext from "../../utils/ProductContext";
 
-// const Clothing = () => {
+const Clothing = () => {
 
-//     const [productState, setProductState] = useState({
-//         title: "",
-//         price: 0,
-//         image: "",
-//         description: "",
-//         stock: 0,
-//         tags: [],
-//         category: "clothing"
-//       })
+    const [productState, setProductState] = useState({
+        title: "",
+        price: 0,
+        image: "",
+        description: "",
+        stock: 0,
+        tags: [],
+        category: ""
+      })
     
-//       useEffect(() => {
-//         API.getProducts()
-//         .then((res) => {
-//           console.log(res.data);
-//           console.log(res.data[0]);
-//           var featuredProducts = [];
-//           console.log("This is the watchlist");
-//           for (var i = 0; i < res.data.length; i++) {
-//             featuredProducts.push(res.data[i]);
-//           }
-//           setProductState(featuredProducts)
-//         });
-//       }, []);
+      useEffect(() => {
+        API.getCatProducts("60b7a8b472bce34d0b371da8")
+        .then((res) => {
+          console.log(res.data);
+          console.log(res.data[0]);
+          var featuredProducts = [];
+          for (var i = 0; i < res.data.length; i++) {
+            featuredProducts.push(res.data[i]);
+          }
+          setProductState(featuredProducts)
+        });
+      }, []);
 
-//     //   const filter = () => {
-//     //     const filterClothing = [];
-//     //     const result = filterClothing.filter(product => product.category === "Clothing-Jewelry");
-//     //     console.log(result)
-//     //   }
 
-//     return (
-//         <ProductContext.Provider value={featuredProducts}>
-//         <Container fluid>
-//             <Row>
-//                 <Col size='md-6'>
-//                     <Header />
-//                     <Nav />
-//                 </Col>
-//                 <Col>
-//                 {productState.length ? productState.map((product, i) => (
-//                     <Card
-//                     key={i}
-//                     title={product.title}
-//                     price={product.price}
-//                     description={product.description}
-//                     image={product.image}
-//                     />
-//                 )) : "Loading products, please wait! "}
-//                 </Col>
-//             </Row>
-//         </Container>
-//         </ProductContext.Provider>
-//     )
-// }
+      return (
+        <ProductContext.Provider value={productState}>
+                <Col size='md-6'>
+                    <Header />
+                    <Nav />
+                </Col>
+                <CardContainer>
+                  <CardWrapper>
+                  {productState.length ? productState.map((product,i) => (
+                    <Card
+                    key={i}
+                    {... product}
+                    />
+                )) : "There are no products available :("}
+                  </CardWrapper>
+                </CardContainer>
 
-// export default Clothing;
+        </ProductContext.Provider>
+    )
+}
+
+export default Clothing;
