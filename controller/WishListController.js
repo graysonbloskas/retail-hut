@@ -2,12 +2,16 @@ const db = require("../models")
 
 module.exports = {
    
-    findById: function(req, res) {
-        db.WishList
-        //   .findById(req.params.id)
-          .findAll(dummyData)       
-          .then(dbModel => res.json(dbModel))
-          .catch(err => res.status(422).json(err));
+    findAll: function(req, res) {
+        db.Product.find()
+        .then(dummyData => {
+            console.log(dummyData)
+            res.json(dummyData)
+        }) .catch (err => {
+            console.log(err)
+            res.json(err)
+        })
+    
           const dummyData = [
     
             {

@@ -1,8 +1,8 @@
 const router = require("express").Router();
-// const WishListController = require("../../controllers/WishListController");
+const WishListController = require("../../controller/WishListController")
 
-// router.route("/")
-//   .get(WishListController.findAll)
+router.route("/")
+  .get(WishListController.findAll)
 //   .post(WishListController.create);
 
 // Matches with "/api/wishlist/:id"
