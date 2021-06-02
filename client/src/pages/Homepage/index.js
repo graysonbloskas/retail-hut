@@ -60,15 +60,13 @@ const Homepage = () => {
           <Row>
             <FeaturedList />
           </Row>
-          <Col>
-            <Row>
-              <Footer />
-            </Row>
-          </Col>
+          
         </Container>
       </ProductContext.Provider>
+      <Footer/>
     </div>
   );
 };
+
 
 export default Homepage;
