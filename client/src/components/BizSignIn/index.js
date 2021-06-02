@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, FormWrap, FormContent, Form, FormInput, FormH1, FormLabel, FormButton, Text } from './elements'
 import Logo from '../Logo';
 
-function SignIn() {
+function bizSignIn() {
   return (
     <div>
       <Logo /> 
@@ -11,7 +11,7 @@ function SignIn() {
           <FormContent>
             <Form action='#'>
               <FormH1>Sign in to your Shop!</FormH1>
-              <FormLabel htmlFor='for'>Business Email</FormLabel>
+              <FormLabel htmlFor='for'>Business Username</FormLabel>
                 <FormInput htmlFor='email' required />
               <FormLabel htmlFor='for'>Password</FormLabel>
                 <FormInput htmlFor='password' required />
@@ -25,4 +25,4 @@ function SignIn() {
   )
 }
 
-export default SignIn
+export default bizSignIn

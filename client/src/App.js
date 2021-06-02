@@ -9,6 +9,7 @@ import Gallery from '../src/pages/Gallery';
 import WishlistPage from '../src/pages/wishlistPage';
 import SigninPage from '../src/pages/SigninPage';
 import SignupUserPage from '../src/pages/SignupPage';
+import BizSignInPage from '../src/pages/BizSignInPage';
 import Clothing from '../src/pages/Clothing';
 import Shoes from '../src/pages/Shoes';
 import Beauty from '../src/pages/Beauty';
@@ -32,6 +33,7 @@ function App() {
       <Route path='/electronics' component={Electronics} />
       <Route path='/signin' component={SigninPage} />
       <Route path='/signup' component={SignupUserPage} />
+      <Route path='/bizsignin' component={BizSignInPage} />
       </Switch>
       
     </div>
