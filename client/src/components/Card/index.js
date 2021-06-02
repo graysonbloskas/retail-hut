@@ -1,18 +1,27 @@
 import React from "react";
+import {CardContainer, CardWrapper, ProductCard, CardH1, BarCard, CardH2, CardsP, CardImg, BtnContainer} from "./element.js";
 
 function Card(props) {
   return (
-    <div className="card" style={{ "width": "18rem" }} key={props.i}>
-      <img className="card-img-top" src={props.image} alt="Card image cap" />
-      <div className="card-body">
-        <h5 className="card-title">{props.title}</h5>
-        <p className="description">{props.description}</p>
-        <p className="card-text">{props.price}</p>
-        <a href="#" className="btn btn-primary">
-          Add to Cart
-        </a>
-      </div>
-    </div>
+    <CardContainer>
+      <CardWrapper>
+        <ProductCard>
+          <CardImg>
+            <img src={props.image}
+            style={{ "max-width": "300px", "max-height": "400px"}} />
+          </CardImg>
+          <CardH2>
+            {props.title}
+          </CardH2>
+          <CardsP>
+            {props.price}
+          </CardsP>
+          <BtnContainer>
+            <a>Add to Cart</a>
+          </BtnContainer>
+        </ProductCard>
+      </CardWrapper>
+    </CardContainer>
   );
 }
 
