@@ -1,22 +1,56 @@
-import React from 'react';
-import Container from '../../components/Container';
+import React, { useEffect, useState } from "react";
 import Col from '../../components/Col';
-import Row from '../../components/Row';
+import Card from '../../components/Card'
+import {CardContainer, CardWrapper} from '../elements.js'
 import Header from '../../components/Header'
 import Nav from '../../components/Nav'
+import API from "../../utils/API";
+import ProductContext from "../../utils/ProductContext";
 
-const Electronics = () => {
+const Clothing = () => {
+    const [productState, setProductState] = useState({
+        title: "",
+        price: 0,
+        image: "",
+        description: "",
+        stock: 0,
+        tags: [],
+        category: ""
+      })
     
-    return (
-        <Container fluid>
-            <Row>
+      useEffect(() => {
+        API.getCatProducts("60b7a8b472bce34d0b371da9")
+        .then((res) => {
+          console.log(res.data);
+          console.log(res.data[0]);
+          var featuredProducts = [];
+          for (var i = 0; i < res.data.length; i++) {
+            featuredProducts.push(res.data[i]);
+          }
+          setProductState(featuredProducts)
+        });
+      }, []);
+
+
+      return (
+        <ProductContext.Provider value={productState}>
                 <Col size='md-6'>
                     <Header />
                     <Nav />
                 </Col>
-            </Row>
-        </Container>
+                <CardContainer>
+                  <CardWrapper>
+                  {productState.length ? productState.map((product,i) => (
+                    <Card
+                    key={i}
+                    {... product}
+                    />
+                )) : "Loading products, please wait! "}
+                  </CardWrapper>
+                </CardContainer>
+
+        </ProductContext.Provider>
     )
 }
 
-export default Electronics;
+export default Clothing;

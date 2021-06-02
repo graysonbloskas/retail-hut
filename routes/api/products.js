@@ -4,10 +4,9 @@ const productController = require("../../controller/productController")
 router.route("/")
     .get(productController.findAll)
 
-// router
-//     .route("/:id")
-//     .get(productController.findById)
-
-
+router
+    .route("/:category")
+    .get(productController.findByCategory)
     
+
 module.exports = router;

@@ -7,5 +7,9 @@ export default {
       },
     getWishList: function() {
       return axios.get("/api/wishlist/");
-    }
+    },
+    getCatProducts: function(category) {
+      console.log(category)
+      return axios.get("/api/products/" + category)
+      }
 }

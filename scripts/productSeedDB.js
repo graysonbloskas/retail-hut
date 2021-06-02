@@ -4,7 +4,6 @@ const db = require("../models");
 
 
 
-
 function productInit (){
 mongoose.connect(
   process.env.MONGODB_URI ||
