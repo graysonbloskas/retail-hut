@@ -8,6 +8,7 @@ export const Container = styled.div`
   right: 0;
   top: 0;
   z-index: 0;
+  overflow: auto;
   );
 `
 export const FormWrap = styled.div`
@@ -18,6 +19,7 @@ export const FormWrap = styled.div`
 
   @media screen and (max-width: 480px) {
     height: 80%;
+   
   }
 `
 
@@ -29,6 +31,7 @@ export const FormContent = styled.div`
 
   @media screen and (max-width: 480px) {
     padding: 10px;
+    
   }
 `
 export const Form = styled.form`
