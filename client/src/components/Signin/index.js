@@ -16,7 +16,7 @@ function SignIn() {
               <FormLabel htmlFor='for'>Password</FormLabel>
                 <FormInput htmlFor='password' required />
               <FormButton type='submit'>Continue</FormButton>
-              <Text>Don't have an Account? Sign Up Now!</Text>
+              <Text><a href="signup">Don't have an Account? Sign Up Now!</a></Text>
             </Form>
           </FormContent>
         </FormWrap>

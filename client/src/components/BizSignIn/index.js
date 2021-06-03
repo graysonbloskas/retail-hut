@@ -16,7 +16,7 @@ function bizSignIn() {
               <FormLabel htmlFor='for'>Password</FormLabel>
                 <FormInput htmlFor='password' required />
               <FormButton type='submit'>Continue</FormButton>
-              <Text>Don't have a store? Sign Up Now!</Text>
+              <Text><a href="/bizsignup">Don't have a store? Sign Up Now!</a></Text>
             </Form>
           </FormContent>
         </FormWrap>

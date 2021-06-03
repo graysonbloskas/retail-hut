@@ -41,6 +41,16 @@ const Homepage = () => {
   }, []);
 
 
+  const cardInfoGetter = () => {
+    API.getProducts()
+      return ((res) => {
+          setProductState(res.data)
+          console.log(res.data)
+        })
+  }
+
+
+
   return (
     <div>
       <ProductContext.Provider value={productState}>
