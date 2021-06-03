@@ -6,7 +6,7 @@ function Card(props) {
         <ProductCard>
           <CardImg>
             <img src={props.image}
-            style={{ "max-width": "300px", "max-height": "400px"}} />
+            style={{ "maxWidth": "300px", "maxHeight": "400px"}} />
           </CardImg>
           <CardH2>
             {props.title}
