@@ -11,5 +11,8 @@ export default {
     getCatProducts: function(category) {
       console.log(category)
       return axios.get("/api/products/" + category)
-      }
+    },
+    findShopProducts: function () {
+      return axios.get("/api/shops");
+    }
 }
