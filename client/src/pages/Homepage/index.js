@@ -9,6 +9,7 @@ import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
 import API from "../../utils/API";
 import ProductContext from "../../utils/ProductContext";
+import StaffPicks from "../../components/StaffPicksList";
 
 const Homepage = () => {
   const [productState, setProductState] = useState({
@@ -35,17 +36,10 @@ const Homepage = () => {
     });
   }, []);
 
-  // useEffect(() => {
-  //   cardInfoGetter();
-  // }, []);
+  useEffect(() => {
+    cardInfoGetter();
+  }, []);
 
-  // const cardInfoGetter = () => {
-  //   API.getProducts()
-  //     return ((res) => {
-  //         setProductState(res.data)
-  //         console.log(res.data)
-  //       })
-  // }
 
   return (
     <div>
@@ -59,6 +53,9 @@ const Homepage = () => {
           </Row>
           <Row>
             <FeaturedList />
+          </Row>
+          <Row>
+            <StaffPicks />
           </Row>
           
         </Container>

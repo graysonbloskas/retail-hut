@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Col from '../../components/Col';
 import Card from '../../components/Card'
 import {CardContainer, CardWrapper} from './elements.js'
-import Header from '../../components/Header'
+import Heading from '../../components/Header'
 import Nav from '../../components/Nav'
 import API from "../../utils/API";
 import ProductContext from "../../utils/ProductContext";
@@ -36,7 +36,7 @@ const Gallery = () => {
     return (
         <ProductContext.Provider value={productState}>
                 <Col size='md-6'>
-                    <Header />
+                    <Heading />
                     <Nav />
                 </Col>
                 <CardContainer>
@@ -51,7 +51,7 @@ const Gallery = () => {
                 </CardContainer>
 
         </ProductContext.Provider>
-    )
-}
+    );
+};
 
 export default Gallery;
