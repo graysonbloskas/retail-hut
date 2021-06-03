@@ -8,6 +8,7 @@ export const Container = styled.div`
   right: 0;
   top: 0;
   z-index: 0;
+  overflow: auto;
   );
 `
 export const FormWrap = styled.div`
