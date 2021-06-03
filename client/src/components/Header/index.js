@@ -17,6 +17,8 @@ const Header = () => {
                         <CartBtn />
                         <Logo />
                         <SearchBar />
+                        <a href="/signin">Sign In User</a>
+                        <a href="/bizsignin">Sign In Business</a>
                     </Col>
                 </Row>
             </Container>
