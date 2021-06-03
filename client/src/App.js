@@ -9,22 +9,27 @@ import Gallery from '../src/pages/Gallery';
 import WishlistPage from '../src/pages/wishlistPage';
 import SigninPage from '../src/pages/SigninPage';
 import SignupUserPage from '../src/pages/SignupPage';
+import BizSignInPage from '../src/pages/BizSignInPage';
+import BizSignUpPage from '../src/pages/BizSignupPage';
 import Clothing from '../src/pages/Clothing';
 import Shoes from '../src/pages/Shoes';
 import Beauty from '../src/pages/Beauty';
 import Electronics from '../src/pages/Electronics';
+import { UserProvider } from "./utils/UserContext";
+import Auth from "./utils/Auth";
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 
 function App() {
   return (
+    <UserProvider>
     <Router>
     <div>
       <Switch>
       <Route exact path='/' component={Homepage} />
       <Route exact path='/Home' component={Homepage} />
       <Route exact path='/Gallery' component={Gallery} />
-      <Route exact path='/wishlist' component={WishlistPage} /> 
+      <PrivateRoute exact path='/wishlist' component={WishlistPage} /> 
       <Route exact path='/Shop' component={Business} />
       <Route path='/clothing' component={Clothing} />
       <Route path='/shoes' component={Shoes} />
@@ -32,11 +37,46 @@ function App() {
       <Route path='/electronics' component={Electronics} />
       <Route path='/signin' component={SigninPage} />
       <Route path='/signup' component={SignupUserPage} />
+      <Route path='/bizsignin' component={BizSignInPage} />
+      <Route path='/bizsignup' component={BizSignUpPage} />
       </Switch>
       
     </div>
     </Router>
+    </UserProvider>
   );
 }
+
+const PrivateRoute = ({ component: Component, ...rest }) => (
+	<Router>
+		<div>
+
+			<Route {...rest} render={props => (
+
+				Auth.isAuthenticated ? (
+					<Component {...props} />
+				) : (
+						<div className="container">
+							<div className="alert alert-danger text-center" role="alert">
+								This page is private to authenticated users.
+					</div>
+							<div className="row">
+								<div className="col-sm"></div>
+								<div className="col-sm">
+									<h3>Please Register or Login</h3>
+								</div>
+								<div className="col-sm"></div>
+							</div>
+							<Redirect to={{
+								pathname: '/',
+								state: { from: props.location }
+							}} />
+						</div>
+					)
+			)} />
+		</div>
+	</Router>
+)
+
 
 export default App;
