@@ -40,6 +40,7 @@ const Homepage = () => {
     cardInfoGetter();
   }, []);
 
+
   const cardInfoGetter = () => {
     API.getProducts()
       return ((res) => {
@@ -47,6 +48,7 @@ const Homepage = () => {
           console.log(res.data)
         })
   }
+
 
 
   return (
