@@ -78,4 +78,5 @@ text-align: center;
 margin-top: 24px;
 color: #fff;
 font-size: 14px;
+
 `

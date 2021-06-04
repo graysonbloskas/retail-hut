@@ -15,8 +15,8 @@ function SignUp() {
                 <FormInput htmlFor='firstName' required />
                 <FormLabel htmlFor='for'>Last Name</FormLabel>
                 <FormInput htmlFor='lastName' required />
-              <FormLabel htmlFor='for'>Email</FormLabel>
-                <FormInput htmlFor='email' required />
+              <FormLabel htmlFor='for'>Username</FormLabel>
+                <FormInput htmlFor='username' required />
               <FormLabel htmlFor='for'>Password</FormLabel>
                 <FormInput htmlFor='password' required />
               <FormButton type='submit'>Continue</FormButton>
