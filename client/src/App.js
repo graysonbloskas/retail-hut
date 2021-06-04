@@ -29,13 +29,11 @@ function App() {
       <Route exact path='/' component={Homepage} />
       <Route exact path='/Home' component={Homepage} />
       <Route exact path='/Gallery' component={Gallery} />
-<<<<<<< Updated upstream
-      <PrivateRoute exact path='/wishlist' component={WishlistPage} /> 
-      <Route exact path='/Shop' component={Business} />
-=======
-      <Route exact path='/wishlist' component={WishlistPage} /> 
+
+      <PrivateRoute exact path='/wishlist' component={WishlistPage} />       
       <Route exact path='/shop' component={Business} />
->>>>>>> Stashed changes
+
+
       <Route path='/clothing' component={Clothing} />
       <Route path='/shoes' component={Shoes} />
       <Route path='/beauty' component={Beauty} />
