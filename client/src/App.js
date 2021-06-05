@@ -15,6 +15,8 @@ import Clothing from '../src/pages/Clothing';
 import Shoes from '../src/pages/Shoes';
 import Beauty from '../src/pages/Beauty';
 import Electronics from '../src/pages/Electronics';
+import ProductPage from '../src/pages/ProductPage'
+
 import { UserProvider } from "./utils/UserContext";
 import Auth from "./utils/Auth";
 
@@ -29,11 +31,8 @@ function App() {
       <Route exact path='/' component={Homepage} />
       <Route exact path='/Home' component={Homepage} />
       <Route exact path='/Gallery' component={Gallery} />
-
       <PrivateRoute exact path='/wishlist' component={WishlistPage} />       
       <Route exact path='/shop' component={Business} />
-
-
       <Route path='/clothing' component={Clothing} />
       <Route path='/shoes' component={Shoes} />
       <Route path='/beauty' component={Beauty} />
@@ -42,6 +41,7 @@ function App() {
       <Route path='/signup' component={SignupUserPage} />
       <Route path='/bizsignin' component={BizSignInPage} />
       <Route path='/bizsignup' component={BizSignUpPage} />
+	  <Route path='/products/:id?' component={ProductPage} />
       </Switch>
       
     </div>
