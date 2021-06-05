@@ -39,6 +39,7 @@ app.post('/register', function(req, res){
   
     
       var newUser = new User(req.body);
+      console.log(req.body);
   
       User.createUser(newUser, function(err, user){
         if(err) throw err;
@@ -51,7 +52,8 @@ app.post('/register', function(req, res){
 app.post('/login',
   passport.authenticate('local'),
   function(req, res) {
-    res.send(req.user);
+    console.log(req.body)
+    res.send(req.body);
   }
 );
 
