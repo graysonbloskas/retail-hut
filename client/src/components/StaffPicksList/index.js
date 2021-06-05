@@ -6,6 +6,7 @@ import Card from "../Card";
 import API from "../../utils/API";
 import ProductContext from "../../utils/ProductContext";
 
+
 function StaffPicks() {
   const [productState, setProductState] = useState({
     title: "",
@@ -18,11 +19,11 @@ function StaffPicks() {
   });
 
   useEffect(() => {
-    API.getCatProducts("60b7d07a8631732f8c3ede72")
+    API.getCatProducts("60b8f5a74a14bbaa82602378")
     .then((res) => {
       var featuredProducts = [];
       console.log("This is the watchlist");
-      for (var i = 0; i < res.data.length; i++) {
+      for (var i = 0; i < res.data; i++) {
         featuredProducts.push(res.data[i]);
       }
       console.log(featuredProducts)

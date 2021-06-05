@@ -14,5 +14,11 @@ export default {
     },
     findShopProducts: function () {
       return axios.get("/api/shops");
+    },
+
+    findOne: function(id) {
+      console.log("************ hopefully one product returns")
+      console.log("Is this working?:" + id);
+      return axios.get("/api/products/" + id)
     }
 }
