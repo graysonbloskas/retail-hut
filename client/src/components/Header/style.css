@@ -4,3 +4,19 @@
     margin-right: 80px;
     margin-top: 25px;
 }
+
+.sign-btn {
+    background-color: white;
+    border: 1.5px solid rgb(41, 41, 75);
+    text-align: center;
+    color: black;
+    padding: .2rem;
+    margin-left: .5rem;
+    display: inline-block;
+    text-decoration: wavy;
+}
+
+.sign-btn:hover {
+   background-color: rgb(52, 95, 121);
+   color: white;
+}
