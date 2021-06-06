@@ -2,7 +2,7 @@ const db = require("../models")
 
 module.exports = {
 findAll: function(req, res) {
-    console.log("looking for the products")
+    console.log("This is a new console log &&&&&")
     db.Product.find()
     .then(data => {
         // console.log(data)
@@ -28,7 +28,7 @@ findAll: function(req, res) {
   findByProductId: function (req, res) {
     console.log("looking for one product")
     console.log("FIND ONE PRODUCT _____", req.params)
-    db.Product.find({ _id: req.params }) 
+    db.Product.find({ _id: req.params.id }) 
     .then(data => {
         res.json(data)
     }) .catch (err => {

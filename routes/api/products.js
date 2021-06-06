@@ -16,9 +16,9 @@ router.route("/:id")
 //     }
 //   });
 
-router
-    .route("/:category")
-    .get(productController.findByCategory)
+// router
+//     .route("/:category")
+//     .get(productController.findByCategory)
     
 
 module.exports = router;

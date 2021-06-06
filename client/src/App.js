@@ -29,7 +29,6 @@ function App() {
     <div>
       <Switch>
       <Route exact path='/' component={Homepage} />
-      <Route exact path='/Home' component={Homepage} />
       <Route exact path='/Gallery' component={Gallery} />
       <PrivateRoute exact path='/wishlist' component={WishlistPage} />       
       <Route exact path='/shop' component={Business} />

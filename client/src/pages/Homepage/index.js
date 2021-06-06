@@ -36,18 +36,6 @@ const Homepage = () => {
     });
   }, []);
 
-  useEffect(() => {
-    cardInfoGetter();
-  }, []);
-
-
-  const cardInfoGetter = () => {
-    API.getProducts()
-      return ((res) => {
-          setProductState(res.data)
-          console.log(res.data)
-        })
-  }
 
 
 
@@ -59,13 +47,13 @@ const Homepage = () => {
             <Col size="md-6">
               <Header />
             </Col>
-            <Nav />
+            {/* <Nav /> */}
           </Row>
           <Row>
             <FeaturedList />
           </Row>
           <Row>
-            <StaffPicks />
+            {/* <StaffPicks /> */}
           </Row>
           
         </Container>

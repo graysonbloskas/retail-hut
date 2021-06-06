@@ -4,6 +4,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import API from "../../utils/API";
 import ProductContext from "../../utils/ProductContext";
 import Header from "../../components/Header";
+import { useParams } from "react-router-dom";
 
 const ProductPage = () => {
 
@@ -17,8 +18,10 @@ const ProductPage = () => {
         category: ""
       })
     
+      const {id} = useParams();
+
     useEffect(() => {
-        API.findOne()
+        API.findOne(id)
         .then((res) => {
           console.log(res.data);
           console.log(res.data[0]);
@@ -32,6 +35,8 @@ const ProductPage = () => {
 
       return (
       <Header />
+        
+
       )
 }
 
