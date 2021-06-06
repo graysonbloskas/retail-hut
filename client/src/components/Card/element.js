@@ -13,45 +13,25 @@ export const ProductCard = styled.div`
   box-shadow: 0 0 20px rgb(228, 228, 228);
 
   &:hover{
-    box-shadow: 0 0 20px rgb(179, 179, 179);
+    box-shadow: 10px 10px 10px grey;
   }
 `;
 
-export const CardH1 = styled.h1`
-  color: #000000;
-  font-family: poppins;
-  font-weight: 700;
-  font-size: 36px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 50px;
-`;
-
-export const BarCard = styled.div`
-  height: 5px;
-  width: 75px;
-  background-color: #000000;
-  text-align: center;
-  margin-top: 10px;
-`;
-
 export const CardH2 = styled.h2`
-  font-family: poppins;
-  color: #00a29b;
+  font-family: arvo;
+  color: rgb(52, 95, 121);
   margin-bottom: 10px;
   margin-top: 10px;
+  font-size: 30px;
   text-transform: uppercase;
+  text-align: center;
 `;
 
 export const CardsP = styled.p`
   color: #000000;
   font-family: roboto;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 20px;
   letter-spacing: 1px;
   text-align: justify;
   margin-bottom: 20px;
