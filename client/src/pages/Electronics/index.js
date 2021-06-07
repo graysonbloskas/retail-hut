@@ -19,7 +19,7 @@ const Clothing = () => {
       })
     
       useEffect(() => {
-        API.getCatProducts("60b7a8b472bce34d0b371da9")
+        API.getCatProducts("60b8f5a74a14bbaa82602379")
         .then((res) => {
           console.log(res.data);
           console.log(res.data[0]);
