@@ -3,6 +3,7 @@ import Container from "../Container";
 import Row from "../Row";
 import Col from "../Col";
 import Card from "../Card";
+import './index.css'
 import {CardContainer, CardWrapper} from './element.js'
 import ProductContext from "../../utils/ProductContext"
 
@@ -11,6 +12,7 @@ function FeaturedList() {
   return (
     <div>
 <CardContainer> 
+  <h1 className="staff">Our Staff's Featured List!</h1>
   <CardWrapper>
   {featuredList.length ? featuredList.map((product,i) => (
                     <Card

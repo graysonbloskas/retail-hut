@@ -29,7 +29,7 @@ const Homepage = (id) => {
       console.log(res.data[0]);
       var featuredProducts = [];
 
-      for (var i = 0; i < res.data.length; i += 3) {
+      for (var i = 0; i < res.data.length; i += 6) {
         featuredProducts.push(res.data[i]);
       }
       setProductState(featuredProducts)

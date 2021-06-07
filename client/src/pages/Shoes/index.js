@@ -17,9 +17,9 @@ const Clothing = () => {
         tags: [],
         category: ""
       })
-    
+      
       useEffect(() => {
-        API.getCatProducts("60b7a8b472bce34d0b371dab")
+        API.getCatProducts("60be230cdc1a3960d338ec17")
         .then((res) => {
           console.log(res.data);
           console.log(res.data[0]);
