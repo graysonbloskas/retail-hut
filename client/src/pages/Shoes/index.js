@@ -3,7 +3,6 @@ import Col from '../../components/Col';
 import Card from '../../components/Card'
 import {CardContainer, CardWrapper} from '../elements.js'
 import Header from '../../components/Header'
-import Nav from '../../components/Nav'
 import API from "../../utils/API";
 import ProductContext from "../../utils/ProductContext";
 
@@ -36,8 +35,6 @@ const Clothing = () => {
       return (
         <ProductContext.Provider value={productState}>
                 <Col size='md-6'>
-                    <Header />
-                    <Nav />
                 </Col>
                 <CardContainer>
                   <CardWrapper>

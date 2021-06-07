@@ -26,6 +26,8 @@ function App() {
   return (
     <UserProvider>
     <Router>
+	<Header />
+	<Nav />
     <div>
       <Switch>
       <Route exact path='/' component={Homepage} />

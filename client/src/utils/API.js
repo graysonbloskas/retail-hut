@@ -20,5 +20,13 @@ export default {
       console.log("************ hopefully one product returns")
       console.log("Is this working?:" + id);
       return axios.get("/api/products/" + id)
+    },
+
+    getCategories: function() {
+      return axios.get("/api/category");
+    },
+
+    getCatById: function(id) {
+      return axios.get("/api/category/" + id)
     }
 }

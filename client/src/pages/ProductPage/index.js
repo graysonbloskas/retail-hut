@@ -34,7 +34,7 @@ const ProductPage = () => {
       }, []);
 
       return (
-      <Header />
+      <h1>Hi World</h1>
         
 
       )

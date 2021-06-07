@@ -36,8 +36,6 @@ const Clothing = () => {
       return (
         <ProductContext.Provider value={productState}>
                 <Col size='md-6'>
-                    <Header />
-                    <Nav />
                 </Col>
                 <CardContainer>
                   <CardWrapper>

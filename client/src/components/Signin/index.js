@@ -10,7 +10,6 @@ import {
   FormButton,
   Text,
 } from "./elements";
-import Logo from "../Logo";
 import "./style.css";
 import API from "../../utils/userAPI"
 
@@ -33,7 +32,6 @@ function SignIn() {
 
   return (
     <div>
-      <Logo />
       <Container>
         <FormWrap>
           <FormContent>

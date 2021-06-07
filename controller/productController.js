@@ -13,6 +13,7 @@ findAll: function(req, res) {
     })
 
   },
+  
   findByCategory: function(req, res) {
     console.log("looking for the products" + req.params.category)
     db.Product.find({ category: req.params.category })
