@@ -23,7 +23,7 @@ const Clothing = () => {
         API.getCatProducts("60b8f5a74a14bbaa82602378")
         .then((res) => {
           console.log(res.data);
-          console.log(res.data[0]);
+          console.log(res.data[i]);
           var featuredProducts = [];
           for (var i = 0; i < res.data.length; i++) {
             featuredProducts.push(res.data[i]);

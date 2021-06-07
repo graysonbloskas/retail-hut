@@ -18,7 +18,7 @@ findAll: function(req, res) {
     console.log("looking for the products" + req.params.category)
     db.Product.find({ category: req.params.category })
     .then(data => {
-        // console.log(data)
+        console.log(data)
         res.json(data)
     }) .catch (err => {
         console.log(err)

@@ -4,7 +4,10 @@ const productController = require("../../controller/productController")
 router.route("/")
     .get(productController.findAll)
 
-router.route("/:id")
+router.route("/:category")
+    .get(productController.findByCategory)
+
+router.route("/:_id")
 .get(productController.findByProductId)
 
 // router.get('/:id', async (req, res) => {

@@ -8,6 +8,8 @@ export default {
     signUp: function (userInfo) {
         console.log(userInfo)
         return axios.post("/auth/users/register", userInfo)
-
+    },
+    userAuth: function() {
+        return axios.post("/auth/users/login")
     }
 }
