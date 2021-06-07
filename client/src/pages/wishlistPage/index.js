@@ -24,7 +24,6 @@ const WishlistPage = () => {
   if (!wishList)
     return (
       <Container fluid>
-        <Nav />
         <Row>
           <h1>You Have No Wishlist Items</h1>
         </Row>
@@ -32,7 +31,6 @@ const WishlistPage = () => {
     );
   return (
     <Container fluid>
-      <Nav />
       <Row>
         <Col>
           <CardContainer>
