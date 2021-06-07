@@ -31,7 +31,7 @@ app.use(routes);
 app.use(morgan("dev"));
 // Connect to the Mongo DB
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/retail-hut",
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/retailhut",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
