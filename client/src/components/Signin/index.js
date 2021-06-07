@@ -57,7 +57,7 @@ function SignIn() {
                 name="password"
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <FormButton type="submit">Continue</FormButton>
+              <FormButton href="" type="submit">Continue</FormButton>
               <Text>
                 <a href="signup" className="link">
                   Don't have an Account? Sign Up Now!

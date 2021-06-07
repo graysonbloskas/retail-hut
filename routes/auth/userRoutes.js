@@ -51,10 +51,12 @@ app.post('/register', function(req, res){
   // Endpoint to login
 app.post('/login',
   passport.authenticate('local'),
+
   function(req, res) {
     console.log(req.body)
     res.send(req.body);
   }
+
 );
 
 // Endpoint to get current user

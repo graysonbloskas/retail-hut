@@ -20,10 +20,10 @@ const Clothing = () => {
       })
     
       useEffect(() => {
-        API.getCatProducts("60b7a8b472bce34d0b371da8")
+        API.getCatProducts("60bc10528e1f1b4e70e1d4fd")
         .then((res) => {
           console.log(res.data);
-          console.log(res.data[0]);
+          console.log(res.data[i]);
           var featuredProducts = [];
           for (var i = 0; i < res.data.length; i++) {
             featuredProducts.push(res.data[i]);
