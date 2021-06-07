@@ -51,8 +51,6 @@ const Business = () => {
       return (
         <ShopContext.Provider value={shopState}>
                 <Col size='md-6'>
-                    <Header />
-                    {/* <Nav /> */}
                 </Col>
                 <CardContainer>
                   <CardWrapper>

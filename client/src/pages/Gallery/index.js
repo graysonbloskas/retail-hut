@@ -36,8 +36,6 @@ const Gallery = () => {
     return (
         <ProductContext.Provider value={productState}>
                 <Col size='md-6'>
-                    <Heading />
-                    <Nav />
                 </Col>
                 <CardContainer>
                   <CardWrapper>

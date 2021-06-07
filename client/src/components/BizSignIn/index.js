@@ -5,7 +5,6 @@ import Logo from '../Logo';
 function bizSignIn() {
   return (
     <div>
-      <Logo /> 
       <Container>
         <FormWrap>
           <FormContent>

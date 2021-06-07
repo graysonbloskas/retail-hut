@@ -1,11 +1,10 @@
 import React from 'react'
 import { Container, FormWrap, FormContent, Form, FormInput, FormH1, FormLabel, FormButton, Text } from './elements'
-import Logo from '../Logo';
+
 
 function BizSignUp() {
   return (
     <div>
-      <Logo /> 
       <Container>
         <FormWrap>
           <FormContent>

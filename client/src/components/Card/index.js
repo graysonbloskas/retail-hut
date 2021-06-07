@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import './index.css';
 import {CardContainer, CardWrapper, ProductCard, CardH1, BarCard, CardH2, CardsP, CardImg, BtnContainer} from "./element.js";
+import {FaHeart} from 'react-icons/fa';
 
 function Card(props) {
   return (
@@ -15,10 +17,13 @@ function Card(props) {
             {props.title}
           </CardH2>
           <CardsP>
-            {props.price}
+            <p>${props.price}</p>
           </CardsP>
           <BtnContainer>
-            <a>Add to Cart</a>
+            <a className="cu-cart-btn">Add to Cart</a>
+          </BtnContainer>
+          <BtnContainer>
+            <a className="heart-btn"><FaHeart /></a>
           </BtnContainer>
         </ProductCard>
   );

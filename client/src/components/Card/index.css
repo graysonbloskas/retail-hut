@@ -1,0 +1,21 @@
+.cu-cart-btn {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    padding: 0.5em;
+    font-size: 18px;
+    
+}
+
+.heart-btn {
+    color: black;
+    font-size: 24px;
+    cursor: pointer;
+}
+.heart-btn:hover {
+    color: rgb(201, 20, 20);
+}
+
+.cu-cart-btn:hover {
+    color: rgb(17, 116, 15);
+}

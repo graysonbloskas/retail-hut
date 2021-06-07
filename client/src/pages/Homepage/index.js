@@ -5,13 +5,12 @@ import Row from "../../components/Row";
 import homepageHero from "../../components/Homepage-Hero";
 import Header from "../../components/Header";
 import FeaturedList from "../../components/FeaturedList";
-import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
 import API from "../../utils/API";
 import ProductContext from "../../utils/ProductContext";
 import StaffPicks from "../../components/StaffPicksList";
 
-const Homepage = () => {
+const Homepage = (id) => {
   const [productState, setProductState] = useState({
     title: "",
     price: 0,
@@ -21,6 +20,7 @@ const Homepage = () => {
     tags: [],
     category: ""
   })
+  console.log(id);
 
   useEffect(() => {
     API.getProducts()
@@ -29,25 +29,13 @@ const Homepage = () => {
       console.log(res.data[0]);
       var featuredProducts = [];
 
-      for (var i = 0; i < res.data.length; i++) {
+      for (var i = 0; i < res.data.length; i += 3) {
         featuredProducts.push(res.data[i]);
       }
       setProductState(featuredProducts)
     });
   }, []);
 
-  useEffect(() => {
-    cardInfoGetter();
-  }, []);
-
-
-  const cardInfoGetter = () => {
-    API.getProducts()
-      return ((res) => {
-          setProductState(res.data)
-          console.log(res.data)
-        })
-  }
 
 
 
@@ -57,15 +45,13 @@ const Homepage = () => {
         <Container fluid>
           <Row>
             <Col size="md-6">
-              <Header />
             </Col>
-            <Nav />
           </Row>
           <Row>
             <FeaturedList />
           </Row>
           <Row>
-            <StaffPicks />
+            {/* <StaffPicks /> */}
           </Row>
           
         </Container>

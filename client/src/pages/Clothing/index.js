@@ -20,7 +20,7 @@ const Clothing = () => {
       })
     
       useEffect(() => {
-        API.getCatProducts("60bc10528e1f1b4e70e1d4fd")
+        API.getCatProducts("60b8f5a74a14bbaa82602378")
         .then((res) => {
           console.log(res.data);
           console.log(res.data[i]);
@@ -36,8 +36,6 @@ const Clothing = () => {
       return (
         <ProductContext.Provider value={productState}>
                 <Col size='md-6'>
-                    <Header />
-                    <Nav />
                 </Col>
                 <CardContainer>
                   <CardWrapper>
