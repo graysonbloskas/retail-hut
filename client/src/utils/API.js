@@ -22,11 +22,11 @@ export default {
       return axios.get("/api/products/" + id)
     },
 
-    getCategories: function() {
-      return axios.get("/api/category");
-    },
+    // getCategories: function() {
+    //   return axios.get("/api/category");
+    // },
 
-    getCatById: function(id) {
-      return axios.get("/api/category/" + id)
-    }
+    // getCatById: function(id) {
+    //   return axios.get("/api/category/" + id)
+    // }
 }

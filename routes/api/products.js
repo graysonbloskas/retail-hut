@@ -7,8 +7,8 @@ router.route("/")
 router.route("/:category")
     .get(productController.findByCategory)
 
-router.route("/:_id")
-.get(productController.findByProductId)
+// router.route("/:_id")
+// .get(productController.findByProductId)
 
 // router.get('/:id', async (req, res) => {
 //     const product = await Product.findOne({ _id: req.params.id });

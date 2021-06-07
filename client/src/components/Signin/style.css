@@ -1,11 +1,10 @@
-.link{
+ .link{
     text-decoration: none;
     color: #fff;
     
-    
-}
+} 
 
 .link:hover {
-    color: #01bf71;
-    transition: 0.3s ease-out;
-}
+    text-decoration: none;
+    color: #fff;
+} 
