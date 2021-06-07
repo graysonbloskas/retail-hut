@@ -30,7 +30,15 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 app.use(morgan("dev"));
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/retailhut");
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/retail-hut",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  }
+);
 
 // Start the API server
 app.listen(PORT, function() {
