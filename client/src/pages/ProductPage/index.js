@@ -1,10 +1,6 @@
 import React, {useState, useEffect} from 'react'
-import { Link } from 'react-router-dom';
-import {useSelector, useDispatch} from 'react-redux';
 import API from "../../utils/API";
 import './styles.css'
-import ProductContext from "../../utils/ProductContext";
-import Header from "../../components/Header";
 import { useParams } from "react-router-dom";
 
 const ProductPage = () => {

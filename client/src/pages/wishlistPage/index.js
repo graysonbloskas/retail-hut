@@ -62,13 +62,9 @@ const WishlistPage = () => {
     <Container fluid>
       <Row>
         <Col>
-          <CardContainer>
-            <CardWrapper>
               {wishList.length
                 ? wishList.map((item, i) => <Card key={i} {...item} />)
                 : "Loading products, please wait! "}
-            </CardWrapper>
-          </CardContainer>
         </Col>
       </Row>
     </Container>

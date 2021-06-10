@@ -2,13 +2,10 @@ import React, { useEffect, useState } from "react";
 import Container from "../../components/Container";
 import Col from "../../components/Col";
 import Row from "../../components/Row";
-import homepageHero from "../../components/Homepage-Hero";
-import Header from "../../components/Header";
 import FeaturedList from "../../components/FeaturedList";
 import Footer from "../../components/Footer";
 import API from "../../utils/API";
 import ProductContext from "../../utils/ProductContext";
-import StaffPicks from "../../components/StaffPicksList";
 
 const Homepage = (id) => {
   const [productState, setProductState] = useState({

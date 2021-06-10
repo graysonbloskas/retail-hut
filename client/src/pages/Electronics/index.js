@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Col from '../../components/Col';
 import Card from '../../components/Card'
-import {CardContainer, CardWrapper} from '../elements.js'
-import Header from '../../components/Header'
-import Nav from '../../components/Nav'
+import {CardContainer, CardWrapper} from '../elements.js';
 import API from "../../utils/API";
 import ProductContext from "../../utils/ProductContext";
 

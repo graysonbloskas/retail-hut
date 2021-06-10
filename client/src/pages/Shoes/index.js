@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Col from '../../components/Col';
 import Card from '../../components/Card'
-import {CardContainer, CardWrapper} from '../elements.js'
-import Header from '../../components/Header'
 import API from "../../utils/API";
 import ProductContext from "../../utils/ProductContext";
 
@@ -36,16 +34,12 @@ const Clothing = () => {
         <ProductContext.Provider value={productState}>
                 <Col size='md-6'>
                 </Col>
-                <CardContainer>
-                  <CardWrapper>
                   {productState.length ? productState.map((product,i) => (
                     <Card
                     key={i}
                     {... product}
                     />
                 )) : "There are no products available :( "}
-                  </CardWrapper>
-                </CardContainer>
 
         </ProductContext.Provider>
     )

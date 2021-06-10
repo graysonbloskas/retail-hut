@@ -1,7 +1,5 @@
 import React from "react";
 import "./style.css";
-// import { ImSearch } from "react-icons/im";
-// import { FaHome, FaPlus } from "react-icons/fa";
 
 const Nav = () => {
   return (

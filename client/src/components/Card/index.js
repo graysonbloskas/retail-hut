@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './index.css';
-import {CardContainer, CardWrapper, ProductCard, CardH1, BarCard, CardH2, CardsP, CardImg, BtnContainer} from "./element.js";
+import {ProductCard, CardTitle, CardsPrice, CardImg, BtnContainer} from "./element.js";
 import {FaHeart} from 'react-icons/fa';
 
 function Card(props) {
@@ -13,18 +13,15 @@ function Card(props) {
             style={{ "maxWidth": "300px", "maxHeight": "400px"}} />
           </CardImg>
           </Link>
-          <CardH2>
+          <CardTitle>
             {props.title}
-          </CardH2>
-          <CardsP>
+          </CardTitle>
+          <CardsPrice>
             <p>${props.price}</p>
-          </CardsP>
-          <BtnContainer>
+          </CardsPrice>
             <a className="cu-cart-btn">Add to Cart</a>
-          </BtnContainer>
-          <BtnContainer>
             <a className="heart-btn"><FaHeart /></a>
-          </BtnContainer>
+   
         </ProductCard>
   );
 }
