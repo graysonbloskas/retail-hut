@@ -21,7 +21,6 @@ export const FormWrap = styled.div`
     height: 80%;
   }
 `
-
 export const FormContent = styled.div`
   height: 100%;
   display: flex;
@@ -48,6 +47,23 @@ export const Form = styled.form`
     padding: 32px 32px;
   }
   `
+
+  export const FormButton = styled.button`
+  background: #26884f;
+  padding: 16px 0;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+`
+export const Text = styled.span`
+text-align: center;
+margin-top: 24px;
+color: #fff;
+font-size: 14px;
+`
+
 export const FormH1 = styled.h1`
   margin-bottom: 40px;
   color: #fff;
@@ -65,18 +81,4 @@ export const FormInput = styled.input`
   margin-bottom: 32px;
   border-radius: 4px;
 `
-export const FormButton = styled.button`
-  background: #26884f;
-  padding: 16px 0;
-  border: none;
-  border-radius: 4px;
-  color: #fff;
-  font-size: 20px;
-  cursor: pointer;
-`
-export const Text = styled.span`
-text-align: center;
-margin-top: 24px;
-color: #fff;
-font-size: 14px;
-`
+

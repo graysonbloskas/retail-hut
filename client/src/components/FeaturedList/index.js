@@ -1,7 +1,5 @@
 import React, { useContext } from "react";
-import Container from "../Container";
-import Row from "../Row";
-import Col from "../Col";
+
 import Card from "../Card";
 import './index.css'
 import {CardContainer, CardWrapper} from './element.js'

@@ -1,9 +1,8 @@
 import React from 'react'
 
-function ContainerFluid(props) {
+function ContainerFluid() {
     return (
         <div className="container-fluid"></div>
     )
 }
-
 export default ContainerFluid;

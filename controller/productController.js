@@ -5,7 +5,6 @@ findAll: function(req, res) {
     console.log("This is a new console log &&&&&")
     db.Product.find()
     .then(data => {
-        // console.log(data)
         res.json(data)
     }) .catch (err => {
         console.log(err)

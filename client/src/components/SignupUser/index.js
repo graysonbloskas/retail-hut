@@ -30,7 +30,6 @@ function SignUp() {
       firstName: firstName,
       lastName: lastName,
     };
-    // console.log(userInfo);
     API.signUp(userInfo);
   };
 

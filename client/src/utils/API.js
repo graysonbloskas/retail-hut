@@ -22,6 +22,7 @@ export default {
       return axios.get("/api/products/" + id)
     },
 
+    
     // getCategories: function() {
     //   return axios.get("/api/category");
     // },

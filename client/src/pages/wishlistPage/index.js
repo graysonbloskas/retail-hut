@@ -3,12 +3,8 @@ import Container from "../../components/Container";
 import Nav from "../../components/Nav"
 import Col from "../../components/Col";
 import Row from "../../components/Row";
-import Header from "../../components/Header";
 import Card from "../../components/Card";
 import API from "../../utils/API";
-import { UserContext } from "../../utils/UserContext";
-import { CardContainer, CardWrapper } from "./elements";
-import {useHistory} from "react-router-dom"
 const WishlistPage = () => {
   
   const [wishList, setWishList] = useState([]);

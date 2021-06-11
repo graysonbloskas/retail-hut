@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const ProductCard = styled.div`
   background: white;
   flex-direction: column;
@@ -8,6 +7,13 @@ export const ProductCard = styled.div`
   display: flex;
   flex-wrap: wrap;
   box-shadow: 0 0 20px rgb(228, 228, 228);
+`;
+
+export const CardImg = styled.div`
+  min-width: 300px;
+  min-height: 400px;
+  max-width: auto;
+  max-height: auto;
 `;
 
 export const CardTitle = styled.h2`
@@ -26,9 +32,4 @@ export const CardsPrice = styled.p`
   // text-align: center;
 `;
 
-export const CardImg = styled.div`
-  min-width: 300px;
-  min-height: 400px;
-  max-width: auto;
-  max-height: auto;
-`;
+

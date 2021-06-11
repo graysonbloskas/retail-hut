@@ -25,10 +25,8 @@ function SignIn() {
       username: username,
       password: password
     }
-    // console.log(userInfo);
     API.login(userInfo)
   };
-
 
   return (
     <div>

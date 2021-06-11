@@ -7,5 +7,4 @@ function Col(props) {
       </div>
     );
   }
-
 export default Col;

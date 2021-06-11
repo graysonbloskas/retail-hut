@@ -9,5 +9,4 @@ function Hero(props) {
     </div>
   );
 }
-
 export default Hero;

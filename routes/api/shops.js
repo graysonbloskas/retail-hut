@@ -3,6 +3,7 @@ const shopController = require("../../controller/shopController")
 
 router.route("/")
     .get(shopController.findShopProducts)
+    
 
 // router
 //     .route("/:category")
